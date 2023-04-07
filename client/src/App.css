@@ -107,7 +107,7 @@ button:hover{
     background-color: #dba7ce;
 }
 
-form .login h1, form.register h1{
+form.login h1, form.register h1{
     text-align: center;
 }
 div.post-page div.image{
