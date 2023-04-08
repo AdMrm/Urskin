@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../userContext";
+import Search from "./search";
 
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
@@ -32,6 +33,7 @@ export default function Header() {
 
       
       <nav>
+        <Search />
         <Link to="/about">about us </Link>
       
         
