@@ -7,6 +7,7 @@ export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
     fetch('http://localhost:4000/profile', {
+       mode: 'no-cors',
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -17,6 +18,7 @@ export default function Header() {
 
   function logout() {
     fetch('http://localhost:4000/logout', {
+       mode: 'no-cors',
       credentials: 'include',
       method: 'POST',
        
