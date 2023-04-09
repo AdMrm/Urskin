@@ -17,7 +17,7 @@ const secret = 'asdfe45we45w345wegw3';
 
 
 
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: 'https://64331e6cfc4d660007a337da--urskinbymrm.netlify.app'}));
 
 app.use(express.json());
 app.use(cookieParser());
