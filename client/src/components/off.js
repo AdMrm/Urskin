@@ -1,10 +1,12 @@
 import { formatISO9075 } from "date-fns";
+import myImage from '../pics/pic1.jpg';
+
 export default function Off() {
     return (
         <div className="post">
       <div className="image">
       
-          <img  src={'https://hips.hearstapps.com/hmg-prod/images/skincare-1588698347.png?crop=0.666460012399256xw:1xh;center,top&resize=980:*'} alt=""/>
+                <img src={myImage} alt="skin care image" />
        
       </div>
       <div className="content">
