@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemoon index.js",
+    "dev": "nodemon index.js",
     "build":"npm i"
   },
   "author": "",
