@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export default function RegisterPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -30,7 +31,9 @@ export default function RegisterPage() {
                 value={password}
             onChange={ev=>setPassword(ev.target.value)}
             />
-            <button>Register</button>
+            <button>Register</button> <br></br>
+            <span>already have an account  ? login right now :</span>
+            <Link to="/login"><button className="btns">login</button></Link>
         </form>
         
     )
