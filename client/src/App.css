@@ -4,7 +4,6 @@
 body{
     color:rgb(94, 61, 66) ;
     background-color :  rgb(253, 245, 247);
-   
 }
 a{
     cursor: pointer;
@@ -18,76 +17,28 @@ main{
     max-width: 960px;
     margin: 0 auto;
 }
-/* header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 40px;  
-        
-}
-header nav   {   
-      text-decoration: none;
-     display: flex;
-     gap: 150px;
-          
-}
-nav div a {
-    text-decoration: none;
-    
-}
-
-div.navi{
-    display: flex;
-    gap: 30px;
-    
-}
-div.main{
-    display: flex;
-    gap: 30px;
-
-    
-}
-.{
-    cursor: pointer;
-    display: none;
-}
-
-
-header a.logo{
-    font-weight: bold;
-    font-size: 1.5rem;
-     text-decoration: none;
-} */
 
 header{
     display: block;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 70px;  
-        
+    margin-bottom: 70px;         
 }
 
 header nav div  {   
    display: flex;
-      text-decoration: none;     
-            
+      text-decoration: none;               
 }
 
 .logo {
   font-size: 2rem;
   font-weight: bold;
- 
 }
-
-
-.navi {
-    
+.navi {   
  float: left;  
  gap: 15px;
 }
-
 .main{
    float: right;   
    gap: 15px;
@@ -104,8 +55,6 @@ header nav div  {
   cursor: pointer;
   display: none;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .navi {
@@ -127,14 +76,15 @@ header nav div  {
      float:none;
      position: absolute;
      right: 2%;
-     top: 5%;    
+     top: 3%;    
   }
   .icon {
     display: block;    
   }
 .open{
  right: 1%;
- top: 11%;
+ top: 8%;
+ 
 }
 
 }
@@ -154,26 +104,17 @@ margin-bottom: 30px;
 @media screen and (min-width: 1000px) {
     div.post{
         grid-template-columns: .9fr 1.1fr;
-    }
-    
+    }   
 }
-/* @media (max-width:768px){
-    .borgir{
-        display: block;
-    }
-} */
 
 
 div.post div.content h2{
    margin: 0;
-   font-size: 1.7rem; 
-
-    
+   font-size: 1.7rem;     
 }
 div.post div.content a{
    text-decoration: none; 
    color: inherit;
-
 }
 div.post p.info{
 margin: 6px 0;
@@ -183,7 +124,6 @@ font-weight: bold;
 display: flex;
 gap: 10px;
 }
-
 div.post p.info a.author{
    color: #333; 
 }
@@ -191,10 +131,11 @@ div.post p.summary{
     margin: 10px 0;
     line-height: 1.5rem;
 }
+
+
 form.login ,form.register{
     max-width: 400px;
-    margin: auto;
-   
+    margin: auto;  
 }
 input{
 display: block;
@@ -204,7 +145,6 @@ padding: 6px 9px;
 border: 1px solid #ddd;
 border-radius: 5px;
 background-color: #fff;
-
 }
 button{
     width: 100%;
@@ -218,10 +158,10 @@ button:hover{
     color: rgb(73, 40, 73);
     background-color: #dba7ce;
 }
-
 form.login h1, form.register h1{
     text-align: center;
 }
+
 div.post-page div.image{
     max-height:300px;
     display: flex;
@@ -285,15 +225,15 @@ div.post-page a.edit-btn:hover{
      color: rgb(73, 40, 73);
     background-color: #dba7ce;
 }
+
+
 a svg{
     height:40px;
 }
 .section{
     width: 100%;
     min-height: 100vh;
-    background-color: #f1f1f1;
-    
-    
+    background-color: #f1f1f1;    
 }
 .container{
     width: 100%;
@@ -318,10 +258,11 @@ a svg{
     text-align: center;
     border-color:#e2dede ;
 }
+
+
 .search{
  width: 100%;
 padding: 5px 5px;
-
 }
 a{
     color: inherit;
