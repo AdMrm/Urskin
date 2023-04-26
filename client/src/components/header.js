@@ -10,7 +10,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://urskin.onrender.com/profile', {
       
       credentials: 'include',
     }).then(response => {
@@ -21,7 +21,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
   }, []);
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch('https://urskin.onrender.com/logout', {
       
       credentials: 'include',
       method: 'POST',
