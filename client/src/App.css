@@ -270,3 +270,12 @@ a{
 a:hover{
     color:rgb(196, 143, 151);
 }
+.btns{
+    width: 30%;
+   
+}
+.btnss button{
+    justify-content: center;
+    /* align-items: center; */
+    
+}
