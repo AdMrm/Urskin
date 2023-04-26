@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import {UserContext} from '../userContext'
 
 
@@ -41,7 +41,11 @@ import {UserContext} from '../userContext'
                     placeholder="password"
                     value={password}
                     onChange={ev => setPassword(ev.target.value)} />
-                <button>Login</button>
+                <button>Login</button> <br/>
+                <div className="btnss">
+                 <span>you don't have an account  ? sign up right now :</span>
+                <Link to="/register"><button className="btns">register</button></Link>
+                </div>
             </form>
            
         );
