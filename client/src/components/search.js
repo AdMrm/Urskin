@@ -8,7 +8,7 @@ export default function Search () {
   const [posts, setPosts] = useState([]); 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('http://localhost:4000/search');
+      const response = await fetch('https://urskin.onrender.com/search');
       const data = await response.json();
       setPosts(data.data.posts);
     }
@@ -19,7 +19,7 @@ export default function Search () {
   */
   const searchPost = async (e) => {
     const searchValue = e.target.value;
-    const response = await fetch(`http://localhost:4000/search?search=${searchValue}`);
+    const response = await fetch(`https://urskin.onrender.com/search?search=${searchValue}`);
      const data = await response.json();
     // The subset of posts is added to the state that will trigger a re-render of the UI
     setPosts(data.data.posts); 
