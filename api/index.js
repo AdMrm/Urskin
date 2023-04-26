@@ -17,7 +17,7 @@ const secret = 'asdfe45we45w345wegw3';
 
 
 
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: 'https://urskinbymrm.netlify.app/'}));
 app.use((req, res, next) => { res.header({"Access-Control-Allow-Origin": "*"}); next(); });
 app.use(express.json());
 app.use(cookieParser());
@@ -149,7 +149,44 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 });
             
- 
+app.get('/search', async (req, res, next) => {
+  // We look for a query parameter "search"
+  const { search } = req.query;
+  let posts;
+  if (search) { // If search exists, the user typed in the search bar
+    posts = await Post.aggregate(
+      [  
+        {
+          '$search': {
+            'index': 'default', 
+            'autocomplete': {
+              'query': search, // noticed we assign a dynamic value to "query"
+              'path': 'title',
+            }
+          }
+        }, {
+          '$limit': 5
+        }, {
+          '$project': {
+            '_id': 1, 
+            'title': 1, 
+            'author': 1, 
+            'createdAt': 1,
+          }
+        }
+      ]
+    );
+  } else { // The search is empty so the value of "search" is undefined
+    posts = await Post.find().sort({ createdAt: 'desc' });
+  }
+
+  return res.status(200).json({
+    statusCode: 200,
+    message: 'Fetched posts',
+    data: { posts },
+  });  
+});
+
 app.listen(4000);
 //wZXxx4eeMOQgoV6M   Urskin
    
