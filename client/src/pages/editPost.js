@@ -12,7 +12,7 @@ export default function EditPost() {
 
 
     useEffect(() => {
-       fetch(`http://localhost:4000/post/`+id).then(response => {
+       fetch(`https://urskin.onrender.com/post/`+id).then(response => {
             response.json().then(postInfo => {
                 setTitle(postInfo.title);
                 setContent(postInfo.content);
@@ -32,7 +32,7 @@ export default function EditPost() {
             data.set('file', files?.[0]);
         }
         
-    const response = await fetch('http://localhost:4000/post', {
+    const response = await fetch('https://urskin.onrender.com/post', {
       method: 'PUT',
       body: data,
       credentials: 'include',
