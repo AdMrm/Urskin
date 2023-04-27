@@ -9,7 +9,9 @@ import {UserContextProvider} from './userContext'
 import CreatePost from './pages/createPost';
 import EditPost from './pages/editPost';
 import AboutPage from './pages/aboutPage';
+import Search from './components/search'
 function App() {
+
 
   return (
    
@@ -23,6 +25,7 @@ function App() {
           <Route path={'/post/:id'} element={<PostPage />} />
           <Route path={"/edit/:id"} element={<EditPost />} />
           <Route path={'/about'} element={<AboutPage/>} />
+          <Route path={'/search'} element={<Search/>} />
         </Route>
       </Routes>
       </UserContextProvider>
