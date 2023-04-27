@@ -17,7 +17,7 @@ const secret = 'asdfe45we45w345wegw3';
 
 
 
-app.use(cors({credentials: true, origin: 'https://urskinbymrm.netlify.app/'}));
+app.use(cors({credentials: true, origin: 'https://urskinbymrm.netlify.app'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
